@@ -19,7 +19,7 @@ COPY --chown=appuser:appuser utils.py .
 COPY --chown=appuser:appuser save.json .
 COPY --chown=appuser:appuser bids.json .
 COPY --chown=appuser:appuser templates/ templates/
-COPY --chown=appuser:appuser static/ static/
+# COPY --chown=appuser:appuser static/ static/
 
 # Switch to non-root user
 USER appuser
