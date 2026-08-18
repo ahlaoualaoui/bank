@@ -1,0 +1,6 @@
+Flask
+gunicorn
+
+requests      # Add if you make external API calls
+jinja2        # Add if you do custom template rendering
+python-dotenv # Add if you use a .env file locally
