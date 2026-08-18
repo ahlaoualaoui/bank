@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auction House</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; }
+        .container { max-width: 600px; margin: 0 auto; }
+        input { width: 100%; padding: 8px; margin: 5px 0; box-sizing: border-box; }
+        button { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p><a href="{{ url_for('dashboard') }}">← Back to Dashboard</a></p>
+        <h2>Live Auction House 🔨</h2>
+        <hr>
+        
+        <h3>Current Item: Golden Bitcoin Physical Coin</h3>
+        <p><strong>Highest Bid:</strong> ${{ highest_bid }}</p>
+        
+        <h3>Place Your Bid</h3>
+        <form method="POST" action="{{ url_for('bid') }}">
+            <label>Bid Price</label>
+            <input type="number" name="price" step="0.01" required>
+            <button type="submit">Submit Bid</button>
+        </form>
+    </div>
+</body>
+</html>
